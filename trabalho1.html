@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8"/>
+	<link href="arquivo.css" rel="stylesheet">
+	<script language="Javascript" src="enviar.js"></script>
+	<title>Cadastro de clientes</title>
+	
+</head>
+<body>
+	<div>
+		<form name="form1" action="" method="get">
+			<table border="2">
+				<tr>
+					<th colspan="2"> Cadastro de clientes </h1> </th>
+				</tr>
+				<tr>
+					<td> CPF: </td>
+					<td> <input type="text" size="14" id="cpft"  maxlength="14" onkeypress="mascara(this,'###.###.###-##');return soNumeros(event);"/></td>
+				</tr>
+				<tr>
+					<td> Nome: </td>
+					<td><input type="text" size="80" id="nomet" onkeypress=" return soLetras(event)"/></td>
+				</tr>
+				<tr>
+					<td> Endereco: </td>
+					<td><input type="text" size="80" id="endt"</td>
+				</tr>
+				<tr>
+					<td> Cidade: </td>
+					<td><input type="text" size="50" id="cidt"/></td>
+				</tr>
+				<tr>
+					<td> Sexo: </td>
+					<td><select  id="sext">
+							<option value="valor1" selected>--Escolher sexo--</option>
+							<option  id = "masc" value="Masculino"> Masculino </option>
+							<option  id ="fem" value="Feminino"> Feminino </option>
+							
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td> Telefone: </td>
+					<td><input type="text" size="15" id="telt" maxlength="12" onkeypress="mascara(this,'##-####-####'); return soNumeros(event)"/></td>
+				</tr>
+				<tr>
+					<td> E-mail: </td>
+					<td><input type="text" size="40" id="emailt"/></td>
+				</tr>
+				<tr>
+					<td> Senha: </td>
+					<td><input type="password" size="15" id="psw" onkeypress="return tiraEspacoSenha(event)"/></td>
+				</tr>
+				<tr>
+					<td> Receber promoções: </td>
+					<td><input type="checkbox" id="ckb1" value="sim" onclick="msgCheck()"/> Sim
+					    <input type="checkbox" id="ckb2" value="não"/> Não
+					</td>
+				</tr>
+				<tr>
+					<td id="obs"> Obs: </td>
+					<td>
+						<textarea id ="txta" cols="85" rows="9">
+						
+						</textarea>
+					</td>	
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="button" name="btnenviar" value="Enviar"onclick="validacao()" />
+						<input type="button" name="btnvalores" value="Valores" onclick="CarregarDados()"/>
+					</td>
+
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
